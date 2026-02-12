@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReputeUp</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Styles -->
+    <link rel="stylesheet" href="css/fonts.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="bg-white fixed top-0 left-0 w-full z-50">
+      <nav class="container mx-auto px-4 lg:px-6">
+        <div class="flex items-center justify-between py-4">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="./index.html" class="text-2xl font-bold text-gray-900">
+              <img
+                src="./assets/images/logo.png"
+                class="h-[42px]"
+                alt="ReputeUp Logo"
+              />
+            </a>
+          </div>
+
+          <!-- Desktop Navigation - Center -->
+          <div
+            class="hidden lg:flex items-center space-x-4 flex-1 justify-center mr-auto"
+          >
+            <a
+              href="#home"
+              class="text-[#333333] font-semibold text-sm p-2 leading-[16px]"
+              >Home</a
+            >
+            <a
+              href="#features"
+              class="text-[#333333] font-semibold text-sm p-2 leading-[16px]"
+              >Features</a
+            >
+            <a
+              href="#pricing"
+              class="text-[#333333] font-semibold text-sm p-2 leading-[16px]"
+              >Pricing</a
+            >
+            <a
+              href="#resources"
+              class="text-[#333333] font-semibold text-sm p-2 leading-[16px]"
+              >Resources</a
+            >
+            <a
+              href="#blog"
+              class="text-[#333333] font-semibold text-sm p-2 leading-[16px]"
+              >Blog</a
+            >
+            <a
+              href="#contact"
+              class="text-[#333333] font-semibold text-sm p-2 leading-[16px]"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Desktop Buttons - Right -->
+          <div class="hidden lg:flex items-center space-x-[5px]">
+            <a href="#login" class="btn btn-white"> Login </a>
+            <a href="#signup" class="btn btn-primary"> Start for FREE </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-button"
+            class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none"
+          >
+            <span class="sr-only">Open main menu</span>
+            <!-- Hamburger Icon -->
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div
+      id="mobile-menu-overlay"
+      class="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+      style="display: none"
+    ></div>
+
+    <!-- Mobile Menu Drawer -->
+    <div
+      id="mobile-menu"
+      class="fixed top-0 left-0 h-full w-full max-w-[320px] bg-white shadow-2xl z-50 lg:hidden"
+      style="transform: translateX(-100%)"
+    >
+      <div class="flex flex-col h-full">
+        <!-- Drawer Header -->
+        <div
+          class="flex items-center justify-between px-4 py-4 border-b border-gray-200"
+        >
+          <a href="./index.html" class="text-2xl font-bold text-gray-900">
+            <img
+              src="./assets/images/logo.png"
+              class="h-[42px]"
+              alt="ReputeUp Logo"
+            />
+          </a>
+          <button
+            id="mobile-menu-close"
+            class="p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Drawer Content -->
+        <div class="flex-1 overflow-y-auto px-4 py-4">
+          <div class="flex flex-col space-y-1">
+            <!-- Mobile Nav Links -->
+            <a
+              href="#home"
+              class="text-[#333333] font-semibold text-sm p-2 leading-[16px]"
+            >
+              Home
+            </a>
+            <a
+              href="#features"
+              class="text-[#333333] font-semibold text-sm p-2 leading-[16px]"
+            >
+              Features
+            </a>
+            <a
+              href="#pricing"
+              class="text-[#333333] font-semibold text-sm p-2 leading-[16px]"
+            >
+              Pricing
+            </a>
+            <a
+              href="#resources"
+              class="text-[#333333] font-semibold text-sm p-2 leading-[16px]"
+            >
+              Resources
+            </a>
+            <a
+              href="#blog"
+              class="text-[#333333] font-semibold text-sm p-2 leading-[16px]"
+            >
+              Blog
+            </a>
+            <a
+              href="#contact"
+              class="text-[#333333] font-semibold text-sm p-2 leading-[16px]"
+            >
+              Contact
+            </a>
+          </div>
+
+          <!-- Mobile Buttons -->
+          <div class="mt-8 space-y-3">
+            <a href="#login" class="btn btn-white w-full"> Login </a>
+            <a href="#signup" class="btn btn-primary w-full">
+              Start for FREE
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section id="home" class="lg:pt-[156px] pt-[120px] pb-[50px] hero relative">
+        <div class="hero-bg w-full h-full opacity-[20%] lg:-bottom-[20%] -bottom-[10%]">
+
+        </div>
+        <div class="container mx-auto px-4 lg:px-6 relative z-[1]">
+          <div class="flex justify-center">
+            <a
+              href="#"
+              class="rounded-full inline-block bg-red-700 ai-btn p-[1px]"
+            >
+              <div
+                class="flex items-center py-2 px-6 bg-white rounded-full justify-center gap-3.5"
+              >
+                <img
+                  src="./assets/images/ai-icon.png"
+                  alt="Ai icon"
+                  class="h-[27px]"
+                />
+                <span class="font-medium text-sm"
+                  >Create a FREE voice review page</span
+                >
+              </div>
+            </a>
+          </div>
+          <div class="mt-[34px]">
+            <div class="max-w-[600px] mx-auto">
+              <h1
+                class="text-[48px] font-semibold text-center font-jakarta leading-[120%] capitalize"
+              >
+                Get More Google Reviews thorough <span class="purple-grad">Voice</span>
+              </h1>
+            </div>
+          </div>
+          <p class="text-center mt-[26px] text-base font-medium">Try it with 10 customers today and get instant reviews through voice</p>
+          <div class="lg:mt-[72px] mt-[50px] flex flex-wrap justify-center lg:gap-10 gap-4 items-center">
+            <div class="flex items-center">
+                <img src="./assets/icons/check-green.svg" alt="Icon" class="h-[29px] w-[29px] shrink-0">
+                <span class="text-[#111111] text-sm font-medium">No typing . No app . Works on any phone </span>
+            </div>
+            <div class="flex items-center">
+                <img src="./assets/icons/check-green.svg" alt="Icon" class="h-[29px] w-[29px] shrink-0">
+                <span class="text-[#111111] text-sm font-medium">One link, any channel  </span>
+            </div>
+            <div class="flex items-center">
+                <img src="./assets/icons/check-green.svg" alt="Icon" class="h-[29px] w-[29px] shrink-0">
+                <span class="text-[#111111] text-sm font-medium">Collect reviews + text / video testimonials + widget </span>
+            </div>
+          </div>
+          <div class="mt-6">
+            <div class="py-[26px] px-[34px] flex items-center justify-center gap-2.5 hero-btns mx-auto w-fit">
+                <a href="#signup" class="btn btn-primary">Start for FREE</a>
+                <a href="#pricing" class="btn btn-white">See Pricing</a>
+            </div>
+            <p class="text-center font-medium text-base">No credit card • Setup in ~2 minutes  • Google-safe flow</p>
+          </div>
+        </div>
+      </section>
+      <section class="relative lg:py-[70px] py-10">
+        <div class="container mx-auto px-4 lg:px-6 relative z-[1]">
+            <div class="mb-[50px] space-y-2 text-center">
+                <h2 class="sec-title lg:text-[40px] text-[32px] font-semibold leading-[120%]">How ReputeUp can help you?</h2>
+                <p class="text-base text-[#64748B] font-medium">ReputeUp is your all-in-one tool for gathering  reviews and showcasing testimonials that can drive revenue</p>
+            </div>
+            <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
+                <div class="px-[22px] relative py-6 border-l border-l-[#90BAFE] how-box">
+                    <div class="space-y-4">
+                        <img src="./assets/images/how-1.png" alt="How" class="h-[60px] w-[60px]">
+                        <h5 class="font-bold text-lg"> Rank higher on Google Maps</h5>
+                        <p class="text-base text-[#555555] max-w-[215px]">Customers simply speak their feedback and we turn </p>
+                    </div>
+                </div>
+                <div class="px-[22px] relative py-6 border-l border-l-[#90BAFE] how-box">
+                    <div class="space-y-4">
+                        <img src="./assets/images/how-2.png" alt="How" class="h-[60px] w-[60px]">
+                        <h5 class="font-bold text-lg"> Get more calls</h5>
+                        <p class="text-base text-[#555555] max-w-[215px]">Customers simply speak their feedback and we turn </p>
+                    </div>
+                </div>
+                <div class="px-[22px] relative py-6 border-l border-l-[#90BAFE] how-box">
+                    <div class="space-y-4">
+                        <img src="./assets/images/how-3.png" alt="How" class="h-[60px] w-[60px]">
+                        <h5 class="font-bold text-lg"> More walk-ins</h5>
+                        <p class="text-base text-[#555555] max-w-[215px]">Customers simply speak their feedback and we turn </p>
+                    </div>
+                </div>
+                <div class="px-[22px] relative py-6 border-l border-l-[#90BAFE] how-box">
+                    <div class="space-y-4">
+                        <img src="./assets/images/how-4.png" alt="How" class="h-[60px] w-[60px]">
+                        <h5 class="font-bold text-lg"> Reply in minutes, not days</h5>
+                        <p class="text-base text-[#555555] max-w-[215px]">Customers simply speak their feedback and we turn </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <section class="relative lg:pt-[70px] pt-10 lg:pb-[110px] pb-[70px]">
+        <div class="container mx-auto px-4 lg:px-6 relative z-[1]">
+            <div class="mb-[50px] space-y-2 text-center">
+                <h2 class="sec-title lg:text-[40px] text-[32px] font-semibold leading-[120%]">Collect more reviews on Google-first. Other platforms Later</h2>
+            </div>
+            <div class="flex gap-6 flex-wrap justify-center">   
+                <div class="h-[99px] w-[185px] flex items-center justify-center rounded-[16px] bg-[rgba(219,226,253,0.2)]">
+                    <img src="./assets/images/brands/logo-1.png" alt="Brand Logo" class="w-[140px]">
+                </div>
+                <div class="h-[99px] w-[185px] flex items-center justify-center rounded-[16px] bg-[rgba(219,226,253,0.2)]">
+                    <img src="./assets/images/brands/logo-2.png" alt="Brand Logo" class="w-[130px]">
+                </div>
+                <div class="h-[99px] w-[185px] flex items-center justify-center rounded-[16px] bg-[rgba(219,226,253,0.2)]">
+                    <img src="./assets/images/brands/logo-3.png" alt="Brand Logo" class="w-[120px]">
+                </div>
+                <div class="h-[99px] w-[185px] flex items-center justify-center rounded-[16px] bg-[rgba(219,226,253,0.2)]">
+                    <img src="./assets/images/brands/logo-4.png" alt="Brand Logo" class="w-[140px]">
+                </div>
+                <div class="h-[99px] w-[185px] flex items-center justify-center rounded-[16px] bg-[rgba(219,226,253,0.2)]">
+                    <img src="./assets/images/brands/logo-5.png" alt="Brand Logo" class="w-[100px]">
+                </div>
+                <div class="h-[99px] w-[185px] flex items-center justify-center rounded-[16px] bg-[rgba(219,226,253,0.2)]">
+                    <img src="./assets/images/brands/logo-6.png" alt="Brand Logo" class="w-[140px]">
+                </div>
+            </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- jQuery -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+/* Custom styles for your project */
+
+/* Root variables */
+:root {
+    /* Font families */
+    --font-manrope: 'Manrope', sans-serif;
+    --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+    --color-primary: #4C6CF3;
+    --color-main: #333333;
+    
+    /* Add your custom colors, etc. here */
+}
+
+/* Reset or additional global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply default font to body */
+body {
+    font-family: var(--font-manrope);
+    background-color: #FFFFFF;
+}
+@media (min-width: 1535px) {
+    .container{
+        max-width: 1280px !important;
+    }
+}
+/* Mobile Menu Drawer Styles */
+#mobile-menu {
+    transition: transform 0.3s ease-in-out;
+}
+
+#mobile-menu-overlay {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Smooth slide animation */
+#mobile-menu.menu-open {
+    transform: translateX(0) !important;
+}
+
+#mobile-menu a {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Add your custom CSS classes below */
+
+.font-manrope{
+    font-family: var(--font-manrope);
+}
+
+.font-jakarta{
+    font-family: var(--font-jakarta);
+}
+
+.btn{
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 700;
+    padding: 10px 20px;
+    transition: 0.3s ease-in-out;
+    border: 1px solid var(--color-primary);
+    line-height: 20px;
+}
+
+
+.btn-primary{
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+    min-width: 190px;
+
+}
+
+.btn-primary:hover{
+    background-color: #3B5BD3;
+}
+
+
+.btn-white{
+    background-color: #FFFFFF;
+    color: var(--color-main);
+    min-width: 80px;
+}
+
+.btn-white:hover{
+    color: #FFFFFF;
+    background-color: var(--color-primary);
+}
+
+nav .btn, #mobile-menu .btn{
+    font-size: 14px;
+    padding: 11px 20px;
+    box-shadow: none;
+}
+
+.ai-btn{
+    transition: 0.3s ease-in-out;
+    background-image: linear-gradient(120deg, #DEEBFF 40%, #C64CF3 63%, #4C6CF3 100%);
+}
+
+.ai-btn:hover{
+    box-shadow: 0 0 10px -5px #C64CF3;
+}
+
+.purple-grad{
+    background: linear-gradient(to right, #AA14A2 -10%, #3E19B2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-btns{
+    background-image: url(../assets/images/waves.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.btn{
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.hero-bg{
+    background-image: url(../assets/images/hero-bg.png);
+    background-size: 100% 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+}
+
+.sec-title{
+    background: linear-gradient(to right, #333333, #BBBBBB);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
+    margin: 0 auto;
+    font-family: var(--font-jakarta);
+}
+
+.how-box::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 5px;
+    height: 26px;
+    border-radius: 0 8px 8px 0;
+    background-color: #90BAFE;
+    top: 50%;
+    transform: translateY(-50%);
+}
