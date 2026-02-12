@@ -43,6 +43,43 @@ $(document).ready(function() {
     $mobileMenu.find('a').on('click', function() {
         closeMenu();
     });
+
+    // Initialize Organizations Swiper Slider
+    const orgsSwiper = new Swiper('.orgs-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 66,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        speed: 800,
+        grabCursor: true,
+    });
+
+    // FAQ Accordion
+    $('.faq-question').on('click', function() {
+        const $faqItem = $(this).parent('.faq-item');
+        const $faqAnswer = $(this).next('.faq-answer');
+        
+        // Close all other items
+        $('.faq-item').not($faqItem).removeClass('active');
+        $('.faq-answer').not($faqAnswer).slideUp(300);
+        
+        // Toggle current item
+        $faqItem.toggleClass('active');
+        $faqAnswer.slideToggle(300);
+    });
+
+    // Header scroll effect
+    $(window).on('scroll', function() {
+        if ($(window).scrollTop() > 50) {
+            $('header').addClass('scrolled');
+        } else {
+            $('header').removeClass('scrolled');
+        }
+    });
 });
 
 // Add your interactive functionality here
