@@ -63,7 +63,7 @@ $(document).ready(function() {
         slidesPerView: 'auto',
         spaceBetween: 24,
         loop: true,
-        loopAdditionalSlides: 6,
+        loopAdditionalSlides: 20,
         speed: 6000,
         allowTouchMove: true,
         freeMode: true,
@@ -159,7 +159,7 @@ $(document).ready(function() {
                 for (let starIndex = 1; starIndex <= 5; starIndex += 1) {
                     const filledClass = starIndex <= rating ? ' filled' : '';
                     starsHtml +=
-                        `<img src="./assets/images/empty-star.png" alt="Star" class="review-star${filledClass}">`;
+                        `<img src="./assets/images/empty-star.png" alt="Star" class="review-star${filledClass} rating-${rating}">`;
                 }
 
                 columnHtml += `

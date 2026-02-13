@@ -206,13 +206,27 @@ nav .btn, #mobile-menu .btn{
 .review-star{
     height: 16px;
     width: 16px;
-    opacity: 0.35;
+    background-color: #D9D9D9;
 }
 
-.review-star.filled{
-    opacity: 1;
-    filter: brightness(0) saturate(100%) invert(76%) sepia(69%)
-        saturate(478%) hue-rotate(359deg) brightness(102%) contrast(101%);
+.review-star.filled.rating-1{
+    background-color: #FF2222;
+}
+
+.review-star.filled.rating-2{
+    background-color: #FF8622;
+}
+
+.review-star.filled.rating-3{
+    background-color: #FFCE00;
+}
+
+.review-star.filled.rating-4{
+    background-color: #73CF11;
+}
+
+.review-star.filled.rating-5{
+    background-color: #219653;
 }
 
 /* FAQ Accordion Styles */
@@ -266,3 +280,4 @@ header{
     background-image: url(../assets/images/btn-glass-bg.png);
     background-size: 100% 100%;
 }
+
