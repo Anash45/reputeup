@@ -181,6 +181,40 @@ nav .btn, #mobile-menu .btn{
     border: 1px solid transparent;
 }
 
+.brand-swiper{
+    overflow: hidden;
+}
+
+.brand-swiper .swiper-wrapper{
+    transition-timing-function: linear;
+}
+
+.brand-swiper .swiper-slide{
+    width: 185px;
+}
+
+.brand-card{
+    height: 99px;
+    width: 185px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(219, 226, 253, 0.2);
+}
+
+.review-star{
+    height: 16px;
+    width: 16px;
+    opacity: 0.35;
+}
+
+.review-star.filled{
+    opacity: 1;
+    filter: brightness(0) saturate(100%) invert(76%) sepia(69%)
+        saturate(478%) hue-rotate(359deg) brightness(102%) contrast(101%);
+}
+
 /* FAQ Accordion Styles */
 
 .faq-icon{
@@ -207,4 +241,28 @@ header{
 }
 .scrolled{
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.footer-bottom-bar{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(100%);
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    will-change: transform, opacity;
+}
+
+.footer-bottom-bar.is-visible{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.btn-grad{
+    background-image: linear-gradient(to right, rgba(174, 15, 160, 0.9804) 0%, rgba(57, 25, 179, 1) 70%, rgba(123, 116, 168, 1) 100%);
+}
+
+.glass-btn{
+    background-color: transparent !important;
+    background-image: url(../assets/images/btn-glass-bg.png);
+    background-size: 100% 100%;
 }
